@@ -1,96 +1,90 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscription - FrontaRide</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f7f9;
-      color: #333;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #28a745;
-      padding: 1rem 2rem;
-    }
-    nav .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: white;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li a {
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    iframe {
-      width: 100%;
-      height: 1300px;
-      border: none;
-      border-radius: 12px;
-    }
-    footer {
-      background-color: #1f1f1f;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    footer a {
-      color: #ffc107;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <span class="logo">🚗 FrontaRide</span>
-    <ul>
-      <li><a href="index.html#simulateur">Simulateur</a></li>
-      <li><a href="index.html#avantages">Avantages</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-      <li><a href="conducteurs-passagers.html">Conducteurs & Passagers</a></li>
-      <li><a href="inscription.html">Inscription</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-    </ul>
-  </nav>
+<style>
+  .form-covoiturage {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+  }
 
-  <section class="container">
-    <h2 style="text-align:center; color:#28a745;">Formulaire d'inscription</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeadFk1sI1UplHhAow0LbzYy8tOMcDCL9kMEO88dwacuuRe8A/viewform?embedded=true">Chargement…</iframe>
-  </section>
+  .form-covoiturage h2 {
+    text-align: center;
+    color: #673ab7;
+    margin-bottom: 20px;
+  }
 
-  <footer>
-    <p>&copy; 2025 FrontaRide. Tous droits réservés.</p>
-    <p>
-      <a href="#">Mentions légales</a> |
-      <a href="#">Politique de confidentialité</a> |
-      <a href="#">LinkedIn</a> |
-      <a href="#">Instagram</a>
-    </p>
-  </footer>
-</body>
-</html>
+  .form-covoiturage label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+  }
 
+  .form-covoiturage input[type="text"],
+  .form-covoiturage input[type="email"],
+  .form-covoiturage input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .form-covoiturage input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  .form-covoiturage .radio-group {
+    margin-bottom: 20px;
+  }
+
+  .form-covoiturage button {
+    background-color: #673ab7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  .form-covoiturage button:hover {
+    background-color: #5b2db3;
+  }
+</style>
+
+<form class="form-covoiturage" action="https://docs.google.com/forms/d/e/1FAIpQLSeadFk1sI1UplHhAow0LbzYy8tOMcDCL9kMEO88dwacuuRe8A/formResponse" method="POST" target="_self">
+  <h2>Inscription Covoiturage</h2>
+
+  <label for="entry.1135458568">Nom complet *</label>
+  <input type="text" name="entry.1135458568" required>
+
+  <label for="entry.1501721095">Adresse e-mail *</label>
+  <input type="email" name="entry.1501721095" required>
+
+  <label for="entry.347978205">Téléphone *</label>
+  <input type="tel" name="entry.347978205" required>
+
+  <label for="entry.322946740">Entreprise *</label>
+  <input type="text" name="entry.322946740" required>
+
+  <label for="entry.20057483">Ville de résidence *</label>
+  <input type="text" name="entry.20057483" required>
+
+  <label for="entry.1549825272">Trajet envisagé *</label>
+  <input type="text" name="entry.1549825272" required>
+
+  <label>Je suis *</label>
+  <div class="radio-group">
+    <label><input type="radio" name="entry.1253921732" value="Conducteur" required>Conducteur</label><br>
+    <label><input type="radio" name="entry.1253921732" value="Passager" required>Passager</label>
+  </div>
+
+  <button type="submit">Envoyer</button>
+</form>
