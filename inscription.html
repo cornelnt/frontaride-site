@@ -166,21 +166,22 @@
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxMfdgdlkcjuIzOZ9YbMYFXu7i2DoDZn8DM_chXi-K6i--9tf-BCQDMwdhSyX9-f_vy/exec', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
+     const response = await fetch('https://script.google.com/macros/s/AKfycby9QOmKaqfp4WO27vTKtxPqbI9Xn5dgQTKFrDpOa7cjThROyvcQMfuyEkgfk_tvoUDS/exec', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+});
 
-      const result = await response.json();
-      if (result.status === "success") {
-        message.textContent = "Merci pour votre inscription ! Un email de confirmation vous a été envoyé.";
-        form.reset();
-      } else {
-        message.textContent = "Erreur : " + result.message;
-      }
+const result = await response.json();
+if (result.status === "success") {
+  message.textContent = "Merci pour votre inscription ! Un email de confirmation vous a été envoyé.";
+  form.reset();
+} else {
+  message.textContent = "Erreur : " + result.message;
+}
+
     } catch (error) {
       message.textContent = "Une erreur est survenue. Veuillez réessayer.";
     }
