@@ -64,7 +64,7 @@
       border-radius: 8px;
       font-size: 1rem;
     }
-    button {
+    button, .cta-button {
       margin-top: 2rem;
       padding: 1rem;
       background-color: #28a745;
@@ -73,6 +73,12 @@
       font-weight: 600;
       border-radius: 8px;
       cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    button:hover, .cta-button:hover {
+      background-color: #218838;
     }
     #message {
       margin-top: 1.5rem;
@@ -115,18 +121,24 @@
       <label for="email">Adresse email</label>
       <input type="email" name="email" id="email" required>
 
-      <label for="email">Téléphone</label>
-      <input type="téléphone" name="téléphone" id="téléphone" required>
-      
+      <label for="telephone">Téléphone</label>
+      <input type="tel" name="telephone" id="telephone" required>
+
+      <label for="entreprise">Entreprise</label>
+      <input type="text" name="entreprise" id="entreprise">
+
+      <label for="ville">Ville de résidence</label>
+      <input type="text" name="ville" id="ville" required>
+
+      <label for="trajet">Trajet envisagé (ville départ - arrivée)</label>
+      <input type="text" name="trajet" id="trajet" required>
+
       <label for="statut">Statut</label>
       <select name="statut" id="statut" required>
         <option value="">Choisissez une option</option>
         <option value="conducteur">Conducteur</option>
         <option value="passager">Passager</option>
       </select>
-
-      <label for="trajet">Trajet habituel (ville départ - ville arrivée)</label>
-      <input type="text" name="trajet" id="trajet" required>
 
       <button type="submit">Envoyer</button>
     </form>
