@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<body>
+  <nav>
+    <span class="logo">🚗 FrontaRide</span>
+    <ul>
+      <li><a href="#simulateur">Simulateur</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#avantages">Avantages</a></li>
+      <li><a href="#argumentaires">Conducteurs & Passagers</a></li>
+      <li><a href="#formulaire">Inscription</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <section id="simulateur" class="container">
+    <h2>Simulateur de formule</h2>
+    <form>
+      <input type="text" placeholder="Ville de départ">
+      <input type="text" placeholder="Ville d'arrivée">
+      <button type="submit">Simuler</button>
+    </form>
+  </section>
+
+  <section id="tarifs" class="container">
+    <h2>Nos formules</h2>
+    <div class="tarif-card">
+      <div class="card">
+        <h4>Eco 50</h4>
+        <p>2 trajets/jour ouvré</p>
+        <p>50€/mois</p>
+        <button>S'inscrire</button>
+      </div>
+      <div class="card" style="border:2px solid #ffc107;">
+        <div class="badge">Le + plébiscité</div>
+        <h4>Confort 100</h4>
+        <p>2 trajets/jour ouvré</p>
+        <p>100€/mois</p>
+        <button>S'inscrire</button>
+      </div>
+      <div class="card">
+        <h4>Premium 150</h4>
+        <p>2 trajets/jour ouvré</p>
+        <p>150€/mois</p>
+        <button>S'inscrire</button>
+      </div>
+      <div class="card">
+        <h4>Sur-mesure</h4>
+        <p>2 trajets/jour ouvré</p>
+        <p>Tarif personnalisé</p>
+        <button>S'inscrire</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="avantages" class="container">
+    <h2>Les avantages de FrontaRide</h2>
+    <ul>
+      <li>✅ 2 trajets par jour travaillé GARANTIS</li>
+      <li>🚘 Réservation automatique avec vos conducteurs habituels</li>
+      <li>📆 Planification des trajets à la semaine</li>
+      <li>👤 Conducteurs évalués, profils vérifiés</li>
+      <li>📱 Appli intuitive avec suivi des trajets</li>
+      <li>☎️ Support client prioritaire</li>
+      <li>🔄 Flexibilité en cas d’annulation dernière minute</li>
+    </ul>
+  </section>
+
+  <section id="argumentaires" class="container">
+    <h2>Conducteurs & Passagers</h2>
+    <h3>Pour les conducteurs</h3>
+    <ul>
+      <li>✅ Gratuit à vie – vous ne payez rien</li>
+      <li>✅ Trajets planifiés à l’avance</li>
+      <li>✅ Réduction de vos frais de route grâce à la participation des passagers</li>
+      <li>✅ Système de réputation et badges : gagnez en visibilité</li>
+      <li>✅ Flexibilité totale : vous décidez quand, avec qui et sur quel trajet</li>
+      <li><strong>Jusqu’à 100€/mois reversés</strong></li>
+    </ul>
+    <h3>Pour les passagers</h3>
+    <ul>
+      <li>🚗 Accès à un réseau de conducteurs frontaliers fiables</li>
+      <li>🕒 2 trajets par jour travaillé garantis dès la formule classique</li>
+      <li>📲 App simple d’utilisation avec réservation rapide et messagerie</li>
+      <li>💬 Profil conducteur visible + évaluations</li>
+      <li>🌱 Un geste pour la planète et pour votre budget</li>
+    </ul>
+  </section>
+
+  <section id="formulaire" class="container">
+    <h2>Inscription</h2>
+    <form>
+      <input type="text" placeholder="Nom complet">
+      <input type="email" placeholder="Adresse e-mail">
+      <input type="text" placeholder="Entreprise">
+      <input type="text" placeholder="Ville de résidence">
+      <input type="text" placeholder="Trajet envisagé">
+      <select>
+        <option value="">-- Je suis... --</option>
+        <option value="conducteur">Conducteur</option>
+        <option value="passager">Passager</option>
+      </select>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <section id="faq" class="container">
+    <h2>FAQ</h2>
+    <details><summary>Comment fonctionne l’abonnement ?</summary>
+      <p>Vous choisissez une formule selon la distance de vos trajets. Une fois inscrit, vous accédez à l’app et à vos trajets réservés automatiquement.</p>
+    </details>
+    <details><summary>Puis-je annuler un trajet à la dernière minute ?</summary>
+      <p>Oui ! Vous bénéficiez d’une grande flexibilité avec possibilité d’annuler jusqu’à 1h avant le départ sans frais.</p>
+    </details>
+    <details><summary>En tant que conducteur, suis-je rémunéré ?</summary>
+      <p>Oui, jusqu’à 100€/mois peuvent vous être reversés selon le nombre de passagers transportés et la distance parcourue.</p>
+    </details>
+    <details><summary>Puis-je tester le service avant de m’abonner ?</summary>
+      <p>Une période d’essai gratuite de 7 jours est disponible pour les nouveaux passagers.</p>
+    </details>
+  </section>
+
+  <button class="floating-button" onclick="document.getElementById('formulaire').scrollIntoView({ behavior: 'smooth' })">S'inscrire</button>
+
+  <footer>
+    <p>&copy; 2025 FrontaRide. Tous droits réservés.</p>
+    <p>
+      <a href="#">Mentions légales</a> |
+      <a href="#">Politique de confidentialité</a> |
+      <a href="#">LinkedIn</a> |
+      <a href="#">Instagram</a>
+    </p>
+  </footer>
+</body>
+
+</html>
