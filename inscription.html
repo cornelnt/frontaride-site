@@ -1,90 +1,14 @@
-<style>
-  .form-covoiturage {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #f8f8f8;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    font-family: "Segoe UI", sans-serif;
-    color: #333;
-  }
-
-  .form-covoiturage h2 {
-    text-align: center;
-    color: #673ab7;
-    margin-bottom: 20px;
-  }
-
-  .form-covoiturage label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    color: #555;
-  }
-
-  .form-covoiturage input[type="text"],
-  .form-covoiturage input[type="email"],
-  .form-covoiturage input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 15px;
-  }
-
-  .form-covoiturage input[type="radio"] {
-    margin-right: 8px;
-  }
-
-  .form-covoiturage .radio-group {
-    margin-bottom: 20px;
-  }
-
-  .form-covoiturage button {
-    background-color: #673ab7;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
-  }
-
-  .form-covoiturage button:hover {
-    background-color: #5b2db3;
-  }
-</style>
-
-<form class="form-covoiturage" action="https://docs.google.com/forms/d/e/1FAIpQLSeadFk1sI1UplHhAow0LbzYy8tOMcDCL9kMEO88dwacuuRe8A/formResponse" method="POST" target="_self">
-  <h2>Inscription Covoiturage</h2>
-
-  <label for="entry.1135458568">Nom complet *</label>
-  <input type="text" name="entry.1135458568" required>
-
-  <label for="entry.1501721095">Adresse e-mail *</label>
-  <input type="email" name="entry.1501721095" required>
-
-  <label for="entry.347978205">Téléphone *</label>
-  <input type="tel" name="entry.347978205" required>
-
-  <label for="entry.322946740">Entreprise *</label>
-  <input type="text" name="entry.322946740" required>
-
-  <label for="entry.20057483">Ville de résidence *</label>
-  <input type="text" name="entry.20057483" required>
-
-  <label for="entry.1549825272">Trajet envisagé *</label>
-  <input type="text" name="entry.1549825272" required>
-
-  <label>Je suis *</label>
-  <div class="radio-group">
-    <label><input type="radio" name="entry.1253921732" value="Conducteur" required>Conducteur</label><br>
-    <label><input type="radio" name="entry.1253921732" value="Passager" required>Passager</label>
-  </div>
-
+<form action="https://script.google.com/macros/s/AKfycbx48ui2zXu70MFVyd7ZmKYQR5rIC0-Yw7kzqVPpJy42sUaWI3IHDc9mM7b-XlP6vsID/exec" method="POST">
+  <input type="text" name="nom" placeholder="Nom complet" required><br>
+  <input type="email" name="email" placeholder="Adresse e-mail" required><br>
+  <input type="text" name="telephone" placeholder="Téléphone" required><br>
+  <input type="text" name="entreprise" placeholder="Entreprise" required><br>
+  <input type="text" name="ville" placeholder="Ville de résidence" required><br>
+  <input type="text" name="trajet" placeholder="Trajet envisagé" required><br>
+  <select name="role" required>
+    <option value="">Je suis...</option>
+    <option value="Conducteur">Conducteur</option>
+    <option value="Passager">Passager</option>
+  </select><br>
   <button type="submit">Envoyer</button>
 </form>
