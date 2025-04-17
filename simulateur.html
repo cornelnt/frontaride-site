@@ -112,7 +112,7 @@
   </style>
   <script>
     function initAutocomplete() {
-      const options = { types: ['(cities)'], componentRestrictions: { country: 'fr' } };
+      const options = { types: ['(cities)'], componentRestrictions: { country: ['fr', 'ch'] } };
       new google.maps.places.Autocomplete(document.getElementById("depart"), options);
       new google.maps.places.Autocomplete(document.getElementById("arrivee"), options);
     }
@@ -130,12 +130,13 @@
         if (status === 'OK') {
           const distanceText = response.rows[0].elements[0].distance.text;
           const distanceKm = parseFloat(distanceText.replace(',', '.'));
-          let formule = "";
-          if (distanceKm < 15) formule = "Eco 50";
-          else if (distanceKm < 30) formule = "Confort 100";
-          else if (distanceKm < 60) formule = "Premium 150";
-          else formule = "Formule Sur-Mesure";
-          document.getElementById("resultat-simulation").innerText = `🎯 Formule recommandée : ${formule}`;
+          let crédit = "";
+          if (distanceKm < 10) crédit = "1";
+          else if (distanceKm < 25) crédit = "2";
+          else if (distanceKm < 50) crédit = " 3";
+          else if (distanceKm < 100) crédit = " 4";
+          else crédit = "5";
+          document.getElementById("resultat-simulation").innerText = `🎯 crédit recommandée : ${crédit}`;
         }
       });
     }
@@ -164,7 +165,7 @@
   </header>
 
   <section id="simulateur" class="container" style="max-width: 600px;">
-    <h2>Simulateur de formule</h2>
+    <h2>Simulateur de crédit</h2>
     <form id="formulaire-simulation">
       <input id="depart" type="text" placeholder="Ville de départ" required>
       <input id="arrivee" type="text" placeholder="Ville d'arrivée" required>
